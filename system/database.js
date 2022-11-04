@@ -35,7 +35,7 @@ module.exports = (m) => {
       let group = global.db.groups[m.chat]
       if (group) {
          if (!isNumber(group.activity)) group.activity = 0
-         if (!('autoread' in group)) group.autoread = true
+         if (!('autoread' in group)) group.autoread = false
          if (!('antidelete' in group)) group.antidelete = true
          if (!('antilink' in group)) group.antilink = true
          if (!('antivirtex' in group)) group.antivirtex = true
@@ -52,7 +52,7 @@ module.exports = (m) => {
       } else {
          global.db.groups[m.chat] = {
             activity: 0,
-            autoread: true,
+            autoread: false,
             antidelete: true,
             antilink: true,
             antivirtex: true,
@@ -106,7 +106,7 @@ module.exports = (m) => {
       if (!('cover' in setting)) setting.cover = 'https://telegra.ph/file/f3dc45f92333124b5da2f.jpg'
    } else {
       global.db.setting = {
-         autodownload: true,
+         autodownload: false,
          chatbot: true,
          debug: false,
          error: [],
