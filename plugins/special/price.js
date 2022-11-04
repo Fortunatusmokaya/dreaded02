@@ -1,12 +1,11 @@
 exports.run = {
-   usage: ['mokaya'],
-   hidden: ['fortune', 'fortunatus', 'dreaded'],
+   usage: ['premium'],
    category: 'special',
    async: async (m, {
       client,
       isPrefix
    }) => {
-      client.reply(m.chat, `What Do You Want? -_- 🗿`, m)
+      client.reply(m.chat, `Contact Owner to give you a premium plan for free, send *${isPrefix}owner* to get contact.`, m)
    },
    error: false,
    cache: true,
